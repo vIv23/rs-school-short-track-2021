@@ -11,14 +11,14 @@
  *
  */
 function getSumOfDigits(n) {
-  const num = String(n)
+  let result = String(n)
     .split('')
     .reduce((acc, value) => Number(acc) + Number(value), 0);
 
-  if (num > 9) {
-    return getSumOfDigits(num);
+  if (result > 9) {
+    result = getSumOfDigits(result);
   }
-  return num;
+  return result;
 }
 
 module.exports = getSumOfDigits;
