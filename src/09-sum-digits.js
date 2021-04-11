@@ -14,7 +14,6 @@ function getSumOfDigits(n) {
   let result = String(n)
     .split('')
     .reduce((acc, value) => Number(acc) + Number(value), 0);
-
   if (result > 9) {
     result = getSumOfDigits(result);
   }
